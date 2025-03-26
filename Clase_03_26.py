@@ -15,3 +15,11 @@ if numero == 20:
     print("Numero es igual a 20")
 else:
     print("El numero no es 20")
+
+for i in range(10):
+    print(i)
+
+var1 = 1
+while var1 < 100:
+    print("Hola")
+    var1 = var1 + 1
