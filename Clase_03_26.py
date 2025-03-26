@@ -13,3 +13,5 @@ numero = 20
 
 if numero == 20:
     print("Numero es igual a 20")
+else:
+    print("El numero no es 20")
