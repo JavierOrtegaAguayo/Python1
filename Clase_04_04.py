@@ -48,13 +48,55 @@
 
 #Crear una funcion que dada una string retorne la cantidad de vocales que hay en ella
 
-def vocales(string):
-    vocales = "aeiouAEIOU"
-    i = 0
-    for letra in string:
-        if letra in vocales:
-            i += 1
-    return i
+#def vocales(string):
+#    vocales = "aeiouAEIOU"
+#    i = 0
+#    for letra in string:
+#        if letra in vocales:
+#            i += 1
+#    return i
+#
+#texto = "Camatachuqui"
+#print(vocales(texto))
 
-texto = "Camatachuqui"
-print(vocales(texto))
+#Crear una funcion que dado un numero returne true si es primo o false si no es primo
+
+# print(primo())
+ 
+# def primo():
+#     numero = int(input("Ingrese un numero: "))
+#     if numero <= 1:
+#         return False  
+#     if numero == 2:
+#         return True 
+#     if numero % 2 == 0:
+#         return False
+#     for divisor in range(3, int(numero**0.5) + 1, 2):
+#         if numero % divisor == 0:
+#             return False
+
+
+#print(primo())
+
+def lista_primos(numeros):
+    resultados = []
+    for num in numeros:
+        if num <= 1:
+            resultados.append(False)
+        elif num == 2:
+            resultados.append(True)
+        elif num % 2 == 0:
+            resultados.append(False)
+        else:
+            es_primo = True
+            for divisor in range(3, int(num**0.5) + 1, 2):
+                if num % divisor == 0:
+                    es_primo = False
+                    break
+            resultados.append(es_primo)
+    return resultados
+
+
+numeros = [1, 2, 3, 4, 5, 10, 13]
+print(lista_primos(numeros))  
+
