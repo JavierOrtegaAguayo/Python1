@@ -90,7 +90,7 @@ def gestor_tareas():
             print("Tarea agregada")
         elif opcion == "2":
             for i, tarea in enumerate(tareas):
-                print(f"{i+1}.{tarea["tarea"]} ({Bien if tarea["completada"] else "Mal"})")
+                print(f"{i+1}.{tarea["tarea"]} ({"Bien" if tarea["completada"] else "Mal"})")
             num = int(input("Numero de tarea a completada.")) - 1
             tareas[num]["completada"] = True
             print("Tarea marcada como completada")
@@ -104,7 +104,7 @@ def gestor_tareas():
         else:
             print("Opcion invalida")
             
-#gestor_tareas()
+gestor_tareas()
 import math
 def perimetro_area():
     radio = float(input("Ingrese el radio: "))
